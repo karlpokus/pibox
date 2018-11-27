@@ -14,7 +14,7 @@ $ ./watch.sh
 
 # todo
 - [ ] add $SRC and $DEST as option to `watch.sh`
-- [ ] make osacript work
+- [x] make osacript work
 
 # license
 MIT

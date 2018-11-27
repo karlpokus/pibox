@@ -2,6 +2,11 @@
 
 BASE=~/dev/pibox/examples
 
+# capture first two of these: path event type
+DATA=`echo $1 | cut -d " " -f 1,2`
+
+# sync
 rsync -a --delete $BASE/src $BASE/dest
 
-osascript -e 'display notification "file changed" with title "pibox"'
+# feedback
+osascript -e "display notification \"$DATA\" with title \"pibox\""
